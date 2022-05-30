@@ -3,7 +3,7 @@ const rps =["Rock", "Paper", "Scissors"];
 
 let playerScore = 0
 let computerScore = 0
-
+let choc = 23
 
 
 
@@ -31,8 +31,8 @@ function playRound(playerSelection) {
 }
 
 
-function game() {
-    const playerSelection = prompt ("What do you choose?")
+function game(select) {
+    const playerSelection = select
     playRound(playerSelection);
     
         if (playerScore === 5) {
@@ -44,39 +44,6 @@ function game() {
             computerScore = 0
             playerScore = 0
         }
- 
-
 }
 
-/*
-function func1(func_param){
-    func_param();
-    console.log(func_param());
-
-}
-
-function func2(){
-    console.log("Okay");
-
-}
-
-func1(func2)
-
-
-
-function pass1(value) {
-    return ("Hello " + value);
-}
-
-function pass2() {
-    return (" Howdy!");
-}
-
-function receive_pass(funcA, funcB) {
-    console.log(funcA("world!")+funcB());
-
-}
-
-receive_pass(pass1, pass2);
-*/
 
