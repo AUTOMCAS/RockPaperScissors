@@ -6,45 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R P S</title>
     <link href="styles.css" rel="stylesheet">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit&display=swap');
+    </style>
     
 </head>
 <body>
-<h1>"Balance"</h1>
+<h1>"BALANCE"</h1>
 
 
 
-<h2>Pick a class</h2>
+<h2 class="pick">PICK A CLASS</h2>
 
 <div class="selection">
     <div class="rockGroup">
-      <h3>Rock</h3>
+      <h3>ROCK</h3>
       <button id="Rock"><img src="./images/Warrior.png" height="100px" width="100px"/></button>
     </div>
     <div class="scissorsGroup">
-      <h3>Scissors</h3>
+      <h3>SCISSORS</h3>
       <button id="Scissors"><img src="./images/Rogue.png" height="100px" width="100px"/></button>
     </div>
     <div class="mushroomGroup">
-      <h3>Mushroom</h3>
+      <h3>MUSHROOM</h3>
       <button id="Mushroom"><img src="./images/Warlock.png" height="100px" width="100px"/></button>
     </div>
     <div class="paperGroup">
-      <h3>Everyone else</h3>
+      <h3>EVERYONE ELSE</h3>
       <button id="Paper"><img src="./images/6class.png" height="100px"/></button>
     </div>
     
 </div>
 
-
-<div> 
-  <p>Player score: </p> <p id="playerScore"></p>
-  <p>Computer score: </p> <p id="computerScore"></p>
+<div id="computerChoice">
+  <p>COMPUTER CHOSE: &nbsp</p><p id="computerPick"></p>
 </div>
 
 
 <div>
   <h2 id="conclusion"></h2>
 </div>
+
+
+<div class="scoreTotals"> 
+  <div class="scores">
+    <p>PLAYER SCORE: &nbsp</p><p id="playerScore"></p>
+  </div>
+  <div class="scores">
+    <p>COMPUTER SCORE: &nbsp</p><p id="computerScore"></p>
+  </div>
+</div>
+
+
 
 
 

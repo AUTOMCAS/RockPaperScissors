@@ -13,20 +13,19 @@ function playRound(playerSelection) {
     if (playerSelection === computerSelection) {
     winConclusion = "Draw, how boring."
     } else if ((playerSelection==="Rock") && (computerSelection !=="Scissors")) {
-        winConclusion = "Rock is an unstoppable killing machine...";
+        winConclusion = "You win. Rock is an unstoppable killing machine...";
         ++playerScore;
     } else if ((playerSelection==="Rock") && (computerSelection ==="Scissors")) {
-        winConclusion = "Rock would kill Scissors but Scissors are invisible...";
-        ++playerScore;
+        winConclusion = "Draw. Rock would kill Scissors but Scissors are invisible...";
     } else if (playerSelection==="Mushroom") {
-        winConclusion = "Warlocks are mushrooms...";
+        winConclusion = "You loose. Warlocks are mushrooms...";
         ++computerScore;
     } else if (playerSelection==="Paper" && computerSelection==="Mushroom") {
-        winConclusion = "Warlocks are mushrooms...";
+        winConclusion = "You win. Warlocks are mushrooms...";
         ++playerScore;
     } else if (playerSelection==="Scissors" && computerSelection==="Mushroom" 
     || playerSelection==="Scissors" && computerSelection==="Paper") {
-        winConclusion = "Scissors are so overpowered!";
+        winConclusion = "You win. Scissors are so overpowered!";
         ++playerScore;
     } else {
         winConclusion = "You lose, time to reroll...";
@@ -34,6 +33,21 @@ function playRound(playerSelection) {
     }
 }
     
+
+
+document.getElementById("playerScore").innerHTML = playerScore;
+document.getElementById("computerScore").innerHTML = computerScore;
+
+const btns = document.querySelectorAll('button');
+btns.forEach (btn => btn.addEventListener('click', () => {  
+game(btn.id);
+document.getElementById("playerScore").innerHTML = playerScore;
+document.getElementById("computerScore").innerHTML = computerScore;
+document.getElementById("conclusion").innerHTML = winConclusion;
+document.getElementById("computerPick").innerHTML = computerSelection;
+}));
+
+
 function game(select) {
     const playerSelection = select
     playRound(playerSelection);
@@ -48,18 +62,4 @@ function game(select) {
             playerScore = 0
         }
 }
-
-
-document.getElementById("playerScore").innerHTML = playerScore;
-document.getElementById("computerScore").innerHTML = computerScore;
-
-const btns = document.querySelectorAll('button');
-btns.forEach (btn => btn.addEventListener('click', () => {  
-game(btn.id);
-document.getElementById("playerScore").innerHTML = playerScore;
-document.getElementById("computerScore").innerHTML = computerScore;
-document.getElementById("conclusion").innerHTML = winConclusion;
-}));
-
-
 
