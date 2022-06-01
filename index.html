@@ -9,12 +9,45 @@
     
 </head>
 <body>
+<h1>"Balance"</h1>
 
 
-<button id="Rock" >Rock</button>
-<button id="Scissors">Scissors</button>
-<button id="Paper">Paper</button>
-<button id="Mushroom">Mushroom</button>
+
+<h2>Pick a class</h2>
+
+<div class="selection">
+    <div class="rockGroup">
+      <h3>Rock</h3>
+      <button id="Rock"><img src="./images/Warrior.png" height="100px" width="100px"/></button>
+    </div>
+    <div class="scissorsGroup">
+      <h3>Scissors</h3>
+      <button id="Scissors"><img src="./images/Rogue.png" height="100px" width="100px"/></button>
+    </div>
+    <div class="mushroomGroup">
+      <h3>Mushroom</h3>
+      <button id="Mushroom"><img src="./images/Warlock.png" height="100px" width="100px"/></button>
+    </div>
+    <div class="paperGroup">
+      <h3>Everyone else</h3>
+      <button id="Paper"><img src="./images/6class.png" height="100px"/></button>
+    </div>
+    
+</div>
+
+
+<div> 
+  <p>Player score: </p> <p id="playerScore"></p>
+  <p>Computer score: </p> <p id="computerScore"></p>
+</div>
+
+
+<div>
+  <h2 id="conclusion"></h2>
+</div>
+
+
+
 
 <script src="main.js"></script>
 </body>
