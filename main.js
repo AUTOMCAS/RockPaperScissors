@@ -1,34 +1,38 @@
-const rps =["Rock", "Paper", "Scissors"];
+const rps =["Rock", "Scissors", "Paper", "Mushroom"];
 
 
 let playerScore = 0
 let computerScore = 0
-let choc = 23
+
 
 
 
 function computerPlay() {
-    const random = Math.floor(Math.random() * 3);
+    const random = Math.floor(Math.random() * 4);
     return rps[random];
 
 }
 
 
 function playRound(playerSelection) {
-    const computerSelection = computerPlay();
+    computerSelection = computerPlay();
+    console.log(computerSelection);
     if (playerSelection === computerSelection) {
     console.log("Draw!");
-    } else if ((playerSelection==="Rock" && computerSelection==="Scissors") 
-    || (playerSelection==="Paper" && computerSelection==="Rock")
-    || (playerSelection==="Scissors" && computerSelection==="Paper")) {
-        console.log("Player +1");
-        playerScore = ++playerScore;
-
+    } else if (playerSelection==="Rock") {
+        console.log("Player wins (because it cant find scissors)");
+    } else if (playerSelection==="Mushroom") {
+        console.log("Computer wins!")
+    } else if (playerSelection==="Paper" && computerSelection==="Mushroom") {
+        console.log("Player wins!")
+    } else if (playerSelection==="Scissors" && computerSelection!=="Rock") {
+        console.log("Player wins!")
     } else {
-    console.log("Computer +1");
-    computerScore = ++computerScore;
+        console.log("Computer wins!")
     }
 }
+    
+    
 
 
 function game(select) {
