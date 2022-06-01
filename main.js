@@ -21,14 +21,17 @@ function playRound(playerSelection) {
     console.log("Draw!");
     } else if (playerSelection==="Rock") {
         console.log("Player wins (because it cant find scissors)");
+        ++playerScore;
     } else if (playerSelection==="Mushroom") {
-        console.log("Computer wins!")
-    } else if (playerSelection==="Paper" && computerSelection==="Mushroom") {
-        console.log("Player wins!")
-    } else if (playerSelection==="Scissors" && computerSelection!=="Rock") {
-        console.log("Player wins!")
+        console.log("Computer wins!");
+        ++computerScore;
+    } else if ((playerSelection==="Paper" && computerSelection==="Mushroom") 
+    || (playerSelection==="Scissors" && computerSelection!=="Rock")) {
+        console.log("Player wins!");
+        ++playerScore;
     } else {
-        console.log("Computer wins!")
+        console.log("Computer wins!");
+        ++computerScore;
     }
 }
     
