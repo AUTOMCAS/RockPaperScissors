@@ -39,13 +39,23 @@ document.getElementById("playerScore").innerHTML = playerScore;
 document.getElementById("computerScore").innerHTML = computerScore;
 
 const btns = document.querySelectorAll('button');
-btns.forEach (btn => btn.addEventListener('click', () => {  
-game(btn.id);
-document.getElementById("playerScore").innerHTML = playerScore;
-document.getElementById("computerScore").innerHTML = computerScore;
-document.getElementById("conclusion").innerHTML = winConclusion;
-document.getElementById("computerPick").innerHTML = computerSelection;
+btns.forEach (btn => btn.addEventListener('click', () => { 
+    removeHighlight() 
+    game(btn.id);
+    document.getElementById("playerScore").innerHTML = playerScore;
+    document.getElementById("computerScore").innerHTML = computerScore;
+    document.getElementById("conclusion").innerHTML = winConclusion;
+    document.getElementById("computerPick").innerHTML = computerSelection;
+    btn.classList.add('picked');
+
 }));
+
+
+function removeHighlight() {
+        var btns = document.querySelectorAll('button');
+        btns.forEach (btn => {
+            btn.classList.remove("picked")});
+}
 
 
 function game(select) {
